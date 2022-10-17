@@ -1,5 +1,7 @@
 # SSM_Framework
 
+SSM：https://www.bilibili.com/video/BV1Ya411S7aT
+
 ## 整合SSM
 
 1.pom.xml中导入spring,springmvc,mybatis的相关依赖
@@ -30,7 +32,7 @@ web.xml需要配置两个过滤器，Serlet前端控制器，监听器，上下�
 ​	①：An error happened during template parsing (template: "class path resource [templates/index.html]")
 原因是WEB-INF/templates，我们没有配置web作为一个web根目录，表现就是没那个蓝点，在module.web下面添加
 
-​	②：Tomcat配置deployment时Application context /ssm要与Serverurl一致http://localhost:8080/ssm/，这样才能正确访问
+​	②：Tomcat配置deployment时Application context /ssm要与Serverurl一致localhost:8080/ssm/，这样才能正确访问
 
 
 
