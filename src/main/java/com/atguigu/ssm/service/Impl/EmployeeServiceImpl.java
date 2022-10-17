@@ -37,4 +37,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         PageInfo<Employee> page = new PageInfo<>(list, 5);
         return page;
     }
+
+    @Override
+    public Employee get(Integer id) {
+
+        return employeeMapper.getEmployeeById(id);
+    }
 }

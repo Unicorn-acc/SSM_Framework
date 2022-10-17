@@ -9,4 +9,9 @@
     <select id="getAllEmployee" resultType="Employee">
         select * from t_emp
     </select>
+
+<!--    Employee getEmployeeById(@Param("id") Integer id);-->
+    <select id="getEmployeeById" resultType="Employee">
+        select * from t_emp where emp_id = #{id}
+    </select>
 </mapper>

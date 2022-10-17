@@ -1,6 +1,7 @@
 package com.atguigu.ssm.mapper;
 
 import com.atguigu.ssm.pojo.Employee;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface EmployeeMapper {
      * @return
      */
     List<Employee> getAllEmployee();
+
+    Employee getEmployeeById(@Param("id") Integer id);
 }

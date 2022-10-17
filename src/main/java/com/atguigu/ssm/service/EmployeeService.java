@@ -22,4 +22,9 @@ public interface EmployeeService {
      * @return
      */
     PageInfo<Employee> getEmployeePage(Integer pageNum);
+
+    /**
+     * 根据id查询员工信息
+     */
+    Employee get(Integer id);
 }

@@ -86,9 +86,15 @@ web.xml需要配置两个过滤器，Serlet前端控制器，监听器，上下�
 
 ### 四、进行测试
 
-员工列表功能和展示分页功能
+员工列表功能和展示分页功能。添加、更新待完善（前端页面更改后不生效问题）
 
 ---
+
+## 关系总结
+
+![img](https://secure2.wostatic.cn/static/fEEqaFHTuNT29q6i5BmXGa/image.png?auth_key=1666021034-gT8GbmnRZ7G7WRuneseyhq-0-707d703b9fba5ccf75ff05c321f4b133&image_process=resize,w_1281.25)
+
+
 
 
 
