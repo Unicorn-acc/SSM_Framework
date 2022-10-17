@@ -1,4 +1,7 @@
 # SSM_Framework
+
+## 整合SSM
+
 1.pom.xml中导入spring,springmvc,mybatis的相关依赖
 2.在Project Structure中的项目web下，添加web.xml配置文件,添加Filter，Servlet,listener
 
@@ -63,11 +66,11 @@ web.xml需要配置两个过滤器，Serlet前端控制器，监听器，上下�
 
 - **如果在这里配置了,可以在Mybatis的核心配置文件中省去相应的配置**
 
-​	5.4配置扫描mapper的接口配置MapperScannerConfigurer
+  ​5.4配置扫描mapper的接口配置MapperScannerConfigurer
 
-​	可以把指定的包下面所有mapper接口,通过SqlSessionFactory提供的SqlSession对象,来创建这些mapper接口的代理实现类对象,将这些对象交给ioc来管理
+  ​可以把指定的包下面所有mapper接口,通过SqlSessionFactory提供的SqlSession对象,来创建这些mapper接口的代理实现类对象,将这些对象交给ioc来管理
 
-​	此时在Service实现类中直接装配mapper接口对象就可以了,不需要自动装配SqlSessionFactory对象了,
+  ​此时在Service实现类中直接装配mapper接口对象就可以了,不需要自动装配SqlSessionFactory对象了,
 
 ### 三、事务和日志
 
@@ -76,3 +79,44 @@ web.xml需要配置两个过滤器，Serlet前端控制器，监听器，上下�
 2.开启事务驱动
 
 ​	为什么要开启？aop思想，将使用注解@Transactional表示的方法或类中所有的方法进行事务管理
+
+
+
+### 四、进行测试
+
+员工列表功能和展示分页功能
+
+---
+
+
+
+## 分页插件
+
+分页相关数据
+
+```
+PageInfo{
+
+pageNum=8, pageSize=4, size=2, startRow=29, endRow=30, total=30, pages=8,
+
+list=Page{count=true, pageNum=8, pageSize=4, startRow=28, endRow=32, total=30,pages=8, reasonable=false, pageSizeZero=false},
+
+prePage=7, nextPage=0, isFirstPage=false, isLastPage=true, hasPreviousPage=true,
+hasNextPage=false, navigatePages=5, navigateFirstPage4, navigateLastPage8,
+
+navigatepageNums=[4, 5, 6, 7, 8]
+}
+
+```
+
+pageNum：当前页的页码
+pageSize：每页显示的条数
+size：当前页显示的真实条数
+total：总记录数
+pages：总页数
+prePage：上一页的页码
+nextPage：下一页的页码
+isFirstPage/isLastPage：是否为第一页/最后一页
+hasPreviousPage/hasNextPage：是否存在上一页/下一页
+navigatePages：导航分页的页码数
+navigatepageNums：导航分页的页码，[1,2,3,4,5]
