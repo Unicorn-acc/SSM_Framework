@@ -1,3 +1,15 @@
+# SSM整合
+
+①itguigu_SSMFramework
+
+- 尚硅谷SSM框架的整合
+
+②itheima_customSpringFramework
+
+- 黑马设计模式后面的自定义Spring框架，笔记：https://unicorn-acc.github.io/
+
+
+
 # SSM_Framework
 
 SSM：https://www.bilibili.com/video/BV1Ya411S7aT
@@ -68,11 +80,11 @@ web.xml需要配置两个过滤器，Serlet前端控制器，监听器，上下�
 
 - **如果在这里配置了,可以在Mybatis的核心配置文件中省去相应的配置**
 
-  ​5.4配置扫描mapper的接口配置MapperScannerConfigurer
+  5.4配置扫描mapper的接口配置MapperScannerConfigurer
 
-  ​可以把指定的包下面所有mapper接口,通过SqlSessionFactory提供的SqlSession对象,来创建这些mapper接口的代理实现类对象,将这些对象交给ioc来管理
+  可以把指定的包下面所有mapper接口,通过SqlSessionFactory提供的SqlSession对象,来创建这些mapper接口的代理实现类对象,将这些对象交给ioc来管理
 
-  ​此时在Service实现类中直接装配mapper接口对象就可以了,不需要自动装配SqlSessionFactory对象了,
+  此时在Service实现类中直接装配mapper接口对象就可以了,不需要自动装配SqlSessionFactory对象了,
 
 ### 三、事务和日志
 
